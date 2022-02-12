@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+    <title>GeoLocation</title>
+</head>
+<body>
+    <script>
+        var cidade = this.geoplugin_city();
+        var estado = this.geoplugin_region();
+        var pais = this.geoplugin_countryName();
+        var paisCode = this.geoplugin_countryCode();
+        var latitude = this.geoplugin_latitude();
+        var longitude = this.geoplugin_longitude();
+    </script>
+    <main>
+        <h2> Geolocatização  </h2>
+        <p>Geolocatização é o processo usado para identificar dispositivos geograficamente por meio da internet, radiofrequência ou satélite.</p>
+        <div class="box">
+            <div class="item">
+                <h4> Cidade </h4> 
+                <h3> <script>  document.write(this.cidade) </script></h3>
+            </div>
+            <div class="item">
+                <h4> Estado </h4> 
+                <h3> <script>  document.write(this.estado) </script></h3>
+            </div>
+            <div class="item">
+                <h4> País </h4> 
+                <h3> <script>  document.write(this.pais + " - " + this.paisCode)</script></h3>
+            </div> 
+        </div>
+    </main>
+    <footer>
+        &copy;
+        <script>document.write(new Date().getFullYear());</script> | 
+        Feito por 
+        <a href="https://github.com/olucaspascoal" target="_blank"> 
+            <span> &lt;olucaspascoal/&gt; </span> 
+        </a>
+    </footer>
+</body>
+</html>
